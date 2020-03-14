@@ -903,7 +903,7 @@ echo
      MAGE_SEL_VER="1"
 	 MAGE_VER=MAGE_VER_${MAGE_SEL_VER}
 	 echo
-       MAGE_DOMAIN="127.0.0.1"
+       MAGE_DOMAIN=$(ifconfig eth0 | grep "inet " | awk -F" " '{print $2}')
        MAGE_WEB_USER="myshop"
      MAGE_WEB_ROOT_PATH="/home/${MAGE_WEB_USER}/public_html"
      echo
