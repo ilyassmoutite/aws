@@ -947,7 +947,16 @@ echo
 ###################################################################################
 #                                MAGENTO DATABASE SETUP                           #
 ###################################################################################
+cd /home/myshop/public_html 
+curl -O https://files.magerun.net/n98-magerun.phar
+chmod +x ./n98-magerun.phar
 
+./n98-magerun.phar db:drop -f --no-interaction
+./n98-magerun.phar db:create --no-interaction
+mysql -u admin -h magento2.c29eujmse07q.eu-west-1.rds.amazonaws.com -pilyass123 << EOF
+ DROP DATABASE magento;
+ CREATE DATABASE magento;
+EOF
 ###################################################################################
 #                                MAGENTO INSTALLATION                             #
 ###################################################################################
