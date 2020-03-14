@@ -403,7 +403,6 @@ yum -q -y install https://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/yum
 yum -q -y install ${REPO_FAN} >/dev/null 2>&1
 
 yum install -y yum-utils >/dev/null 2>&1
-yum install -y https://repo.percona.com/yum/percona-release-latest.noarch.rpm
 
 
 yum -q -y install ${EXTRA_PACKAGES} ${PERL_MODULES[@]/#/perl-} >/dev/null 2>&1
