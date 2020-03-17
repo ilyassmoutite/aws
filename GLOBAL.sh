@@ -990,7 +990,9 @@ echo
 WHITETXT "Administrator and domain"
   MAGE_ADMIN_FNAME="ilyass"
    MAGE_ADMIN_LNAME="moutite"
-  MAGE_ADMIN_EMAIL="ilyass@gmail.com"
+   PREF=$(head /dev/urandom | tr -dc a-z | head -c 5)
+   SUFF=$(head /dev/urandom | tr -dc a-z | head -c 5)
+  MAGE_ADMIN_EMAIL="${PREF}@${SUFF}.com"
  MAGE_ADMIN_LOGIN="admin"
   MAGE_ADMIN_PASS="admin11"
   MAGE_SITE_URL="http://${MAGE_DOMAIN}/"
