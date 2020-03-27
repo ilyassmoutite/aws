@@ -28,7 +28,7 @@ sed -i '/<global>/ a\
           <default_priority>10</default_priority> \
           <auto_refresh_fast_cache>1</auto_refresh_fast_cache> \
             <server>127.0.0.1</server> \
-            <port>6380</port> \
+            <port>6379</port> \
             <persistent><![CDATA[db1]]></persistent> \
             <database>1</database> \
             <password></password> \
