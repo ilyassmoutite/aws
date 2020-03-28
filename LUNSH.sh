@@ -3,7 +3,7 @@ yum update -y
 yum install httpd nano wget git nfs-utils -y
 git clone https://github.com/ilyassmoutite/aws.git
 cd aws
-sh magento.sh $3
+sh magento.sh 
 mount -t nfs4 $1:/ /var/www/html/skin
 mount -t nfs4 $1:/ /var/www/html/media
 cd /var/www/
