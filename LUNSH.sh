@@ -1,8 +1,4 @@
-cd /home/centos
-yum update -y
-yum install httpd nano wget git nfs-utils -y
-git clone https://github.com/ilyassmoutite/aws.git
-cd aws
+cd /home/centos/aws
 sh magento.sh 
 mount -t nfs4 $1:/ /var/www/html/skin
 mount -t nfs4 $1:/ /var/www/html/media
