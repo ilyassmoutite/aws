@@ -7,11 +7,11 @@ systemctl enable httpd
 systemctl start redis
 systemctl enable redis
 yum install -y php
-cd /var/www/html/
+cd /var/www/
 wget https://www.dropbox.com/s/7opbj7tneqz3ppl/magento-1.9.3.7-2017-11-27-05-32-35.tar.gz
 tar xzfv magento-1.9.3.7-2017-11-27-05-32-35.tar.gz
-cp magento/* .
-cp -r magento/* .
+cp magento/* html
+cp -r magento/* html
 chmod -R 777 /var/www/html/
 
 yum install php-soap php-mbstring php-gd php-xml php-mcrypt php-mysql -y
