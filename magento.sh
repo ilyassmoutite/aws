@@ -22,7 +22,7 @@ IP=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 php -f install.php -- --license_agreement_accepted yes \
 --locale en_US --timezone "America/Los_Angeles" --default_currency USD \
 --db_host magento2.c29eujmse07q.eu-west-1.rds.amazonaws.com --db_name magento --db_user admin --db_pass ilyass123 \
---url "http://$IP/" --use_rewrites yes \
+--url "http://$1/" --use_rewrites yes \
 --skip_url_validation "yes" \
 --use_rewrites "no" \
 --use_secure no --secure_base_url "" --use_secure_admin no \
