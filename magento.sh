@@ -6,6 +6,10 @@ systemctl start httpd
 systemctl enable httpd
 systemctl start redis
 systemctl enable redis
+echo "centos" | passwd --stdin centos
+yum install -y vsftpd
+systemctl enable vsftpd
+systemctl start vsftpd
 yum install -y php
 cd /var/www/
 wget https://www.dropbox.com/s/7opbj7tneqz3ppl/magento-1.9.3.7-2017-11-27-05-32-35.tar.gz
