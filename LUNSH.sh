@@ -2,9 +2,9 @@ cd /home/centos/aws
 sh magento.sh 
 mount -t nfs4 $1:/ /var/www/html/skin
 mount -t nfs4 $1:/ /var/www/html/media
-cd /var/www/
-rm -r html/*
-cp -r magento/* html
+#cd /var/www/
+#rm -r html/*
+#cp -r magento/* html
 chmod -R 777 /var/www/html/
 cd /var/www/html/
 IP=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
