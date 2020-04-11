@@ -8,15 +8,14 @@ cp -r magento/* html
 chmod -R 777 /var/www/html/
 cd /var/www/html/
 IP=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
-php -f install.php -- --license_agreement_accepted yes \
---locale en_US --timezone "America/Los_Angeles" --default_currency USD \
---db_host magento2.c29eujmse07q.eu-west-1.rds.amazonaws.com --db_name magento --db_user admin --db_pass ilyass123 \
---url "http://$IP/" --use_rewrites yes \
---skip_url_validation "yes" \
---use_rewrites "no" \
---use_secure no --secure_base_url "" --use_secure_admin no \
---admin_lastname Test --admin_firstname Webkul --admin_email "test@webkul.com" \
---admin_username admin --admin_password admin123
+#php -f install.php -- --license_agreement_accepted yes \
+#--db_host magento2.c29eujmse07q.eu-west-1.rds.amazonaws.com --db_name magento --db_user admin --db_pass ilyass123 \
+#--url "http://$IP/" --use_rewrites yes \
+#--skip_url_validation "yes" \
+#--use_rewrites "no" \
+#--use_secure no --secure_base_url "" --use_secure_admin no \
+#--admin_lastname Test --admin_firstname Webkul --admin_email "test@webkul.com" \
+#--admin_username admin --admin_password admin123
 
 cd /home/centos/aws
 sed -i '/<session_save>/d' /var/www/html/app/etc/local.xml
@@ -64,7 +63,7 @@ sed -i '/<global>/ a\
     </cache>' /var/www/html/app/etc/local.xml
 
     #sed -i "s/false/true/" /var/www/html/app/etc/modules/Cm_RedisSession.xml
-sed -i "s/127.0.0.1/$2/" /var/www/html/app/etc/local.xml
+#sed -i "s/127.0.0.1/$2/" /var/www/html/app/etc/local.xml
 touch SUCCESS
 echo "$1" >> SUCCESS
 echo "$2" >> SUCCESS
