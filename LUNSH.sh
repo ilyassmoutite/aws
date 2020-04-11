@@ -2,8 +2,8 @@ cd /home/centos/aws
 sh magento.sh 
 mount -t nfs4 $1:/ /var/www/html/skin
 mount -t nfs4 $1:/ /var/www/html/media
-umount /var/www/html/skin
-umount /var/www/html/media
+umount --force  /var/www/html/skin
+umount --force  /var/www/html/media
 cd /var/www/
 rm -r html/*
 cp -r magento/* html
