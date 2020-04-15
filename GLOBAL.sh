@@ -982,7 +982,7 @@ echo "---> ENTER SETUP INFORMATION"
 echo
 WHITETXT "Database information"
   MAGE_DB_NAME="magento"
-  MAGE_DB_HOST="magento2.c29eujmse07q.eu-west-1.rds.amazonaws.com"
+  MAGE_DB_HOST=$2
 
    MAGE_DB_USER_NAME="admin"
   MAGE_DB_PASS="ilyass123"
