@@ -76,7 +76,7 @@ sed -i '/<global>/ a\
     </cache>' /var/www/html/app/etc/local.xml
 
     #sed -i "s/false/true/" /var/www/html/app/etc/modules/Cm_RedisSession.xml
-#sed -i "s/127.0.0.1/$2/" /var/www/html/app/etc/local.xml
+sed -i "s/127.0.0.1/$2/" /var/www/html/app/etc/local.xml
 touch SUCCESS
 echo "$1" >> SUCCESS
 echo "$2" >> SUCCESS
