@@ -28,8 +28,8 @@ php -f install.php -- --license_agreement_accepted yes \
 --use_secure no --secure_base_url "" --use_secure_admin no \
 --admin_lastname Test --admin_firstname Webkul --admin_email "test@webkul.com" \
 --admin_username admin --admin_password admin123
-mount -t nfs4 $4:/ /var/www/html/skin
-mount -t nfs4 $4:/ /var/www/html/media
+mount -t nfs4 $1:/ /var/www/html/skin
+mount -t nfs4 $1:/ /var/www/html/media
 cd /home/centos/aws
 sed -i '/<session_save>/d' /var/www/html/app/etc/local.xml
 sed -i '/<global>/ a\
@@ -76,7 +76,7 @@ sed -i '/<global>/ a\
     </cache>' /var/www/html/app/etc/local.xml
 
     #sed -i "s/false/true/" /var/www/html/app/etc/modules/Cm_RedisSession.xml
-sed -i "s/127.0.0.1/$1/" /var/www/html/app/etc/local.xml
+sed -i "s/127.0.0.1/$4/" /var/www/html/app/etc/local.xml
 touch SUCCESS
 echo "$1" >> SUCCESS
 echo "$2" >> SUCCESS
