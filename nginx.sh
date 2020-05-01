@@ -28,8 +28,8 @@ php -f install.php -- --license_agreement_accepted yes \
 --use_secure no --secure_base_url "" --use_secure_admin no \
 --admin_lastname Test --admin_firstname Webkul --admin_email "test@webkul.com" \
 --admin_username admin --admin_password admin123
-mount -t nfs4 $1:/ /var/www/html/skin
-mount -t nfs4 $1:/ /var/www/html/media
+mount -t nfs4 $1:/ /usr/share/nginx/html/skin
+mount -t nfs4 $1:/ /usr/share/nginx/html/media
 cd /home/centos/aws
 sed -i '/<session_save>/d' /var/www/html/app/etc/local.xml
 sed -i '/<global>/ a\
